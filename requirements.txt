@@ -103,3 +103,9 @@ websockets==10.3
 Werkzeug==2.1.2
 wsproto==1.2.0
 zhconv==1.4.3
+feapder
+qbittorrent-api
+anitopy
+plexapi
+transmission-rpc
+slack_bolt
