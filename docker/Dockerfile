@@ -17,8 +17,8 @@ RUN apk add --no-cache libffi-dev \
 ENV LANG="C.UTF-8" \
     TZ="Asia/Shanghai" \
     NASTOOL_CONFIG="/config/config.yaml" \
-    NASTOOL_AUTO_UPDATE=true \
-    NASTOOL_CN_UPDATE=true \
+    NASTOOL_AUTO_UPDATE=false \
+    NASTOOL_CN_UPDATE=false \
     NASTOOL_VERSION=main \
     PS1="\u@\h:\w \$ " \
     REPO_URL="https://github.com/krau/n6s.git" \
@@ -38,4 +38,4 @@ RUN python_ver=$(python3 -V | awk '{print $2}') \
     && git config --global --add safe.directory ${WORKDIR}
 EXPOSE 3000
 VOLUME ["/config"]
-ENTRYPOINT ["/n6s/docker/entrypoint.sh"]
+ENTRYPOINT ["sh","/n6s/docker/entrypoint.sh"]
