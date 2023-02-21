@@ -51,5 +51,5 @@ jobs:
             linux/arm64
           push: true
           tags: |
-            ${{ secrets.DOCKERHUB_USERNAME }}/n6s :latest
-            ${{ secrets.DOCKERHUB_USERNAME }}/n6s :${{ env.app_version }}
+            ${{ secrets.DOCKERHUB_USERNAME }}/n6s:latest
+            ${{ secrets.DOCKERHUB_USERNAME }}/n6s:${{ env.app_version }}
